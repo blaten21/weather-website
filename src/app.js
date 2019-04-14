@@ -92,6 +92,13 @@ app.get(`/help/*`, (req, res) => {
         eMessage: 'Help article not found.'
     })
 })
+
+app.get('/ixchel/babemomma', (req, res) => {
+    res.render('ixchel', {
+        title: 'Hot Momma!!!'
+    })
+})
+
 app.get(`*`, (req, res) => {
     res.render('404', {
         title: '404',
