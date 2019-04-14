@@ -99,6 +99,12 @@ app.get('/ixchel/babemomma', (req, res) => {
     })
 })
 
+app.get('/sayre/cutegifs', (req, res) => {
+    res.render('sayre', {
+        title: `Sayre's cute gifs`
+    })
+})
+
 app.get(`*`, (req, res) => {
     res.render('404', {
         title: '404',
