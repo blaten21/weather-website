@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(https://cdn.pixabay.com/photo/2017/03/25/17/56/color-2174052_1280.png);
+    background-image: url(/img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
