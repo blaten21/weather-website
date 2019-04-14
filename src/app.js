@@ -21,17 +21,19 @@ hbs.registerPartials(partialsPath)
 // Setup static directory to serve
 app.use(express.static(path.join(publicDirPath)))
 
+const creator = "Sayre Couto Rules!!!!"
+
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App', 
-        name: 'Michael Kaiser'
+        name: creator
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Michael Kaiser'
+        name: creator
     })
 })
 
@@ -39,7 +41,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         message: 'This is the help page',
         title: 'Help',
-        name: 'Sayre Couto Rules!'
+        name: creator
     })
 })
 
