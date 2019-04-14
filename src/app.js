@@ -25,7 +25,7 @@ const creator = "Sayre Couto Rules!!!!"
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App', 
+        title: `Sayre's Badass Website`, 
         name: creator
     })
 })
