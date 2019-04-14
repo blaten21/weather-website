@@ -45,6 +45,10 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/my/next/page', (req, res) => {
+    res.render('mike')
+})
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
