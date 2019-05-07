@@ -107,6 +107,7 @@ app.get('/sayre/cutegifs', (req, res) => {
 
 app.get('/kaiser/auth', (req, res) => {
     const poi = req.query.pnm_order_identifier
+    const spi = 12345
 
     res.send(`<?xml version="1.0"?>
     <t:payment_authorization_response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.paynearme.com/api/pnm_xmlschema_v2_0" version="2.0">
@@ -121,7 +122,6 @@ app.get('/kaiser/auth', (req, res) => {
 
 app.get('/kaiser/confirm', (req, res) => {
     const ppi = req.query.pnm_payment_identifier
-    const spi = 12345
 
     res.send(`<?xml version="1.0"?>
     <t:payment_authorization_response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.paynearme.com/api/pnm_xmlschema_v2_0" version="2.0">
