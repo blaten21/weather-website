@@ -113,8 +113,8 @@ app.get('/kaiser/auth', (req, res) => {
     <t:payment_authorization_response xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:t='http://www.paynearme.com/api/pnm_xmlschema_v2_0' version='2.0'>
       <t:authorization>
         <t:pnm_order_identifier>${poi}</t:pnm_order_identifier>
-        <t:site_payment_identifier>${spi}</t:site_payment_identifier>
         <t:accept_payment>yes</t:accept_payment>
+        <t:site_payment_identifier>${spi}</t:site_payment_identifier>
       </t:authorization>
     </t:payment_authorization_response>`)
 
