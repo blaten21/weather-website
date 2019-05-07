@@ -110,7 +110,7 @@ app.get('/kaiser/auth', (req, res) => {
     const spi = 12345
 
     res.send(`<?xml version="1.0"?>
-    <t:payment_authorization_response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.paynearme.com/api/pnm_xmlschema_v2_0" version="2.0">
+    <t:payment_authorization_response xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:t='http://www.paynearme.com/api/pnm_xmlschema_v2_0' version='2.0'>
       <t:authorization>
         <t:pnm_order_identifier>${poi}</t:pnm_order_identifier>
         <t:site_payment_identifier>${spi}</t:site_payment_identifier>
@@ -124,11 +124,11 @@ app.get('/kaiser/confirm', (req, res) => {
     const ppi = req.query.pnm_payment_identifier
 
     res.send(`<?xml version="1.0"?>
-    <t:payment_authorization_response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.paynearme.com/api/pnm_xmlschema_v2_0" version="2.0">
-      <t:authorization>
+    <t:payment_confirmation_response xmlns:t="http://www.paynearme.com/api/pnm_xmlschema_v2_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+      <t:confirmation>
         <t:pnm_payment_identifier>${ppi}</t:pnm_payment_identifier>
-      </t:authorization>
-    </t:payment_authorization_response>`)
+      </t:confirmation>
+    </t:payment_confirmation_response>`)
 
 })
 
