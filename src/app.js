@@ -114,8 +114,8 @@ app.get('/kaiser/auth', (req, res) => {
       <t:authorization>
         <t:pnm_order_identifier>${poi}</t:pnm_order_identifier>
         <t:accept_payment>yes</t:accept_payment>
-        <t:site_payment_identifier>${spi}</t:site_payment_identifier>
         <t:receipt>Print this receipt</t:receipt>
+        <t:site_payment_identifier>${spi}</t:site_payment_identifier>
       </t:authorization>
     </t:payment_authorization_response>`)
 
